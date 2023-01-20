@@ -31,7 +31,7 @@ pipeline {
         stage('Deploy to k8s'){
             steps{
                 script{
-                  sh 'kubectl  --kubeconfig=".kube/config" apply -f ./deploymentservice.yaml'
+                  sh 'kubectl  --kubeconfig=.kube/config apply -f ./deploymentservice.yaml'
                 }
             }
         }
